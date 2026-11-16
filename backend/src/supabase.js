@@ -2,10 +2,13 @@ import { createClient } from '@supabase/supabase-js';
 
 const { SUPABASE_URL, SUPABASE_SECRET_KEY } = process.env;
 
+
 if (!SUPABASE_URL || !SUPABASE_SECRET_KEY) {
   throw new Error(
     'Missing SUPABASE_URL or SUPABASE_SECRET_KEY. Copy .env.example to .env and fill them in.'
   );
+  console.log(SUPABASE_SECRET_KEY);
+  console.log(SUPABASE_URL);
 }
 
 // Secret key (sb_secret_...) bypasses Row Level Security.
